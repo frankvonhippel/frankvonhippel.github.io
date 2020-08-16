@@ -13,43 +13,6 @@ function stripHtml(html)
    return tmp.textContent || tmp.innerText || "";
 }
 
-function getid(episode_url)
-{
-	// TODO
-	return null;
-}
-
-function libsynEmbed(id)
-{
-	// let's make that embed code!
-	// <iframe 
-	frame = document.createElement("iframe");
-	// 	style="border: none" 
-	frame.setAttribute("style", "border: none");
-	// 	src="//html5-player.libsyn.com/embed/episode/id/15155606/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/"
-	var src = "//html5-player.libsyn.com/embed/episode/id/"
-	        + id
-	        + "height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/"; 
-	//  height="90" 
-	frame.setAttribute("src", src);
-	//  width="100%" 
-	frame.setAttribute("width", "100%");
-	//  scrolling="no"  
-	frame.setAttribute("scrolling", "no");
-	//  allowfullscreen 
-	frame.prop("allowfullscreen", true);
-	//  webkitallowfullscreen 
-	frame.prop("webkitallowfullscreen", true);
-	//  mozallowfullscreen 
-	frame.prop("mozallowfullscreen", true);
-	//  oallowfullscreen 
-	frame.prop("oallowfullscreen", true);
-	//  msallowfullscreen>
-	frame.prop("msallowfullscreen", true);
-	// </iframe>
-	return frame;
-}
-
 // <item>
 
 // 	<itunes:image href="https://ssl-static.libsyn.com/p/assets/d/e/e/9/dee9ef7f4ebfa0fc/IconPNG.png" />
@@ -58,7 +21,7 @@ function libsynEmbed(id)
 // </item>
 
 $(document).ready(function() {
-	var rss = "https://sciencehistory.libsyn.com/rss";
+	var rss = "https://sciencehistory.libsyn.com/rss?include-libsyn-metadata=true";
 
 	document.getElementById("NOJS").outerHTML = "";
 	
@@ -73,6 +36,7 @@ $(document).ready(function() {
 				
 				console.log("------------------------");
 				console.log("title      : " + el.find("title").text());
+				console.log("id         : " + el.find("libsyn\\:itemId").text());
 
 				// create list item 
 				var podnode = document.createElement("li");
@@ -89,23 +53,13 @@ $(document).ready(function() {
 				var textnode = document.createElement("h5");
 				textnode.setAttribute("class", "card-title");
 
-
-
-				// parsed from, for example:
-				// 	<link><![CDATA[https://sciencehistory.libsyn.com/episode-32-materials-science-ainissa-ramirez]]></link>
 				var link = stripHtml(el.find("link").text());
 				var textlink = document.createElement("a");
 				textlink.setAttribute("href", link);
 				textlink.innerHTML = el.find("title").text();
 				textnode.appendChild(textlink);
-				// set pubdate - parsed from, for example:
-				// 	<pubDate>Sat, 11 Jul 2020 04:00:00 +0000</pubDate>
-				
-				// <a class="btn btn-primary btn-lg" href="#" role="button">
-				// 	<i class="icon-books"></i>
-				// 	Publications
-				// </a>
 
+				// set pubdate - parsed from, for example:
 				var pubdatenode = document.createElement("a");
 				pubdatenode.setAttribute("class", "btn btn-disabled");
 				pubdatenode.setAttribute("href", "#");
@@ -128,19 +82,6 @@ $(document).ready(function() {
 
 				pubdatenode.innerHTML += el.find("itunes\\:duration").text();
 
-				// var pubdatenode = document.createElement("h6");
-				// pubdatenode.setAttribute("class", "card-subtitle");
-				// // duration - parsed from, for example:
-				// // 	<itunes:duration>48:54</itunes:duration>
-				// var duration = el.find("itunes\\:duration").text();
-				
-				// pubdatenode.innerHTML 
-				// 	= "📅 "
-				// 	+ new Date(el.find("pubDate").text()).toDateString()
-				// 	+ " - ⏱️ "
-				// 	+ duration;
-				
-
 				// set description
 				var description_text = stripHtml(el.find("description").text());
 				var description = document.createElement("p");
@@ -151,11 +92,35 @@ $(document).ready(function() {
 				cardbody.appendChild(pubdatenode);
 				cardbody.appendChild(document.createElement("br"));
 				cardbody.appendChild(description);
+
+				var id = el.find("libsyn\\:itemId").text();
+
+				// var iframe = document.createElement("iframe");
+				// cardbody.appendChild(iframe);
+
+				// iframe.setAttribute("style", "border:none");
+
+				cardbody.setAttribute("id", "pod_div_" + id);
+
 				card.appendChild(cardbody);
 				// append card to item
 				podnode.appendChild(card);
 				// append item to list
-				document.getElementById("pods").appendChild(podnode)
+				document.getElementById("pods").appendChild(podnode);
+				
+				var _src = "//html5-player.libsyn.com/embed/episode/id/"
+						 + id
+						 + "/height/90/theme/custom/thumbnail/yes/"
+						 + "direction/forward/render-playlist/no/custom-color/000000/";
+
+				// THIS PART IS WORK IN PROGRESS.
+
+				// $('<iframe>')
+				//     .attr('src', _src)
+				//     .attr('height', 90)
+				//     .attr('width', "100%")
+				//     .attr('scrolling', "no")
+				//     .appendTo('#pod_div_' + id);	
 			});
 	
 
