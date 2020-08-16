@@ -49,6 +49,10 @@
 	background-image : url(emojis/cal.png);
 }
 
+.icon-med {
+	background-image : url(emojis/med.png);
+}
+
 .icon-time {
 	background-image: url(emojis/time.png);
 }
