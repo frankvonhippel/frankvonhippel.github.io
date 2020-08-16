@@ -5,9 +5,6 @@
 
 $(document).ready(function() {
 	
-	var desc = document.getElementById("description");
-
-	desc.innerHTML = 
-		"Books and papers by Frank Arthur von Hippel";
+	
 	
 });

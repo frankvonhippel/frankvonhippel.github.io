@@ -59,14 +59,6 @@ function libsynEmbed(id)
 
 $(document).ready(function() {
 	var rss = "https://sciencehistory.libsyn.com/rss";
-
-	var desc = document.getElementById("description");
-
-				desc.innerHTML = 
-					"Monthly interviews on important moments in the "
-					+ "history of science. Hosted by Frank A. von Hippel, "
-					+ "NAU ecotoxicology professor and author of "
-					+ "The Chemical Age.";
 	
 	$.ajax(rss, {
 		accepts:{

@@ -1,29 +1,61 @@
+.container {
+	min-width: 100%;
+}
+
 .card {
     margin: 0 auto; /* Added */
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
 }
 
-.middle{
-    position:absolute;
-    top:0;
-    bottom:0;
+.span {
+	font-size: 3em;
+}
+
+.middle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
     right: 0;
     left: 0;
     margin: auto; 
 }
 
 .alert {
-	font-size : 20px;
+	font-size: 2em;
+}
+
+.btn div {
+	font-size: 4em;
 }
 
 [class*="icon-"] {
 	background-size: contain;
   	display: inline-block;
-  	height: 40px;
-  	width: 40px;
+  	height: 4em;
+  	width: 4em;
   	padding: 0px;
   	vertical-align: middle;
+}
+
+.icon-amazon {
+	background-image : url(emojis/amazon.png);
+}
+
+.icon-brill {
+	background-image : url(emojis/brill.png);
+}
+
+.icon-brite {
+	background-image : url(emojis/brite.png);
+}
+
+.icon-smile {
+	background-image : url(emojis/smile.png);
+}
+
+.icon-uchicago {
+	background-image: url(emojis/uchicago.png);
 }
 
 .icon-book {
@@ -44,4 +76,23 @@
 
 .icon-scroll {
 	background-image : url(emojis/scroll.png);
+}
+
+.icon-stars {
+	background-image: url(emojis/stars.png);
+}
+
+.card-title {
+	font-size: 2em;
+}
+
+.card-text {
+	font-size: 1.5em;
+}
+
+.book-image {
+	max-height: 90%; 
+	max-width: 70%; 
+	width: auto; 
+	height: auto;
 }
