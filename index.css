@@ -3,3 +3,36 @@
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
 }
+
+.alert {
+	font-size : 20px;
+}
+
+[class*="icon-"] {
+	background-size: contain;
+  	display: inline-block;
+  	height: 40px;
+  	width: 40px;
+  	padding: 0px;
+  	vertical-align: middle;
+}
+
+.icon-book {
+	background-image : url(emojis/book.png);
+}
+
+.icon-books {
+	background-image : url(emojis/books.png);
+}
+
+.icon-microphone {
+	background-image : url(emojis/microphone.png);
+}
+
+.icon-penguin {
+	background-image : url(emojis/penguin.png);
+}
+
+.icon-scroll {
+	background-image : url(emojis/scroll.png);
+}
