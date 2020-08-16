@@ -72,6 +72,14 @@ $(document).ready(function() {
 				console.log("------------------------");
 				console.log("title      : " + el.find("title").text());
 
+				var desc = document.getElementById("description");
+
+				desc.innerHTML = 
+					"Monthly interviews on important moments in the "
+					+ "history of science. Hosted by Frank A. von Hippel, "
+					+ "NAU ecotoxicology professor and author of "
+					+ "The Chemical Age.";
+
 				// create list item 
 				var podnode = document.createElement("li");
 				// theme according to bootstrap
