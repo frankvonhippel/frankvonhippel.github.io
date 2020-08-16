@@ -59,6 +59,8 @@ function libsynEmbed(id)
 
 $(document).ready(function() {
 	var rss = "https://sciencehistory.libsyn.com/rss";
+
+	document.getElementById("NOJS").outerHTML = "";
 	
 	$.ajax(rss, {
 		accepts:{
