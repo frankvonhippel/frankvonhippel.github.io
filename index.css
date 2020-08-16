@@ -36,6 +36,15 @@
   	width: 4em;
   	padding: 0px;
   	vertical-align: middle;
+  	background-repeat: no-repeat;
+}
+
+.icon-cal {
+	background-image : url(emojis/cal.png);
+}
+
+.icon-time {
+	background-image: url(emojis/time.png);
 }
 
 .icon-amazon {

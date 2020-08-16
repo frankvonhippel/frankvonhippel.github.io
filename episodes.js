@@ -100,16 +100,47 @@ $(document).ready(function() {
 				textnode.appendChild(textlink);
 				// set pubdate - parsed from, for example:
 				// 	<pubDate>Sat, 11 Jul 2020 04:00:00 +0000</pubDate>
-				var pubdatenode = document.createElement("h6");
-				pubdatenode.setAttribute("class", "card-subtitle");
-				// duration - parsed from, for example:
-				// 	<itunes:duration>48:54</itunes:duration>
-				var duration = el.find("itunes\\:duration").text();
-				pubdatenode.innerHTML 
-					= "📅 "
-					+ new Date(el.find("pubDate").text()).toDateString()
-					+ " - ⏱️ "
-					+ duration;
+				
+				// <a class="btn btn-primary btn-lg" href="#" role="button">
+				// 	<i class="icon-books"></i>
+				// 	Publications
+				// </a>
+
+				var pubdatenode = document.createElement("a");
+				pubdatenode.setAttribute("class", "btn btn-disabled");
+				pubdatenode.setAttribute("href", "#");
+				pubdatenode.setAttribute("role", "button");
+				pubdatenode.setAttribute("style", "font-size: 1.5em");
+
+				var i = document.createElement("i");
+				i.setAttribute("class", "icon-cal");
+				i.setAttribute("style", "height: 1.5em; width: 1.5em");
+
+				pubdatenode.appendChild(i);
+
+				pubdatenode.innerHTML += new Date(el.find("pubDate").text()).toDateString();
+
+				var j = document.createElement("i");
+				j.setAttribute("class", "icon-time");
+				j.setAttribute("style", "height: 1.5em; width: 1.5em");
+
+				pubdatenode.appendChild(j);
+
+				pubdatenode.innerHTML += el.find("itunes\\:duration").text();
+
+				// var pubdatenode = document.createElement("h6");
+				// pubdatenode.setAttribute("class", "card-subtitle");
+				// // duration - parsed from, for example:
+				// // 	<itunes:duration>48:54</itunes:duration>
+				// var duration = el.find("itunes\\:duration").text();
+				
+				// pubdatenode.innerHTML 
+				// 	= "📅 "
+				// 	+ new Date(el.find("pubDate").text()).toDateString()
+				// 	+ " - ⏱️ "
+				// 	+ duration;
+				
+
 				// set description
 				var description_text = stripHtml(el.find("description").text());
 				var description = document.createElement("p");
