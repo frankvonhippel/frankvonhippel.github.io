@@ -45,7 +45,7 @@ $(document).ready(function() {
 				// create a bootstrap card
 				var card = document.createElement("div");
 				card.setAttribute("class", "card border-primary mb-3");
-				card.setAttribute("style", "width:80%");
+				card.setAttribute("style", "width:95%");
 				var cardbody = document.createElement("div");
 				cardbody.setAttribute("class", "card-body");
 				// set title - parsed from, for example:
