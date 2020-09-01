@@ -21,8 +21,7 @@
 }
 
 .bio-pic {
-	max-width: 100%;
-	max-height: 450px;
+	width: 450px;
 	border-radius: 50%;
 	position: relative;
 	text-align: center;
@@ -31,8 +30,8 @@
 [class*="icon-"] {
 	background-size: contain;
   	display: inline-block;
-  	height: 4em;
-  	width: 4em;
+  	height: 3em;
+  	width: 3em;
   	padding: 0px;
   	vertical-align: middle;
   	background-repeat: no-repeat;
@@ -104,6 +103,9 @@
 
 .book-image {
 	width: 400px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
