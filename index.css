@@ -12,15 +12,6 @@
 	font-size: 3em;
 }
 
-.middle {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto; 
-}
-
 .alert {
 	font-size: 2em;
 }
@@ -31,12 +22,10 @@
 
 .bio-pic {
 	max-width: 100%;
+	max-height: 450px;
 	border-radius: 50%;
 	position: relative;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+	text-align: center;
 }
 
 [class*="icon-"] {
@@ -114,9 +103,12 @@
 }
 
 .book-image {
-	  width: 100%;  /*width of parent container*/
-	  object-fit: contain;
-	  position: relative;
-	  top: 50%;
-	  transform: translateY(-50%);
+	width: 400px;
+
+}
+
+.btn {
+	margin-left: 0.2em !important;
+	margin-right: 0.2em !important;
+	margin-bottom: 1em !important;
 }
