@@ -64,11 +64,11 @@ $(document).ready(function() {
 				pubdatenode.setAttribute("class", "btn btn-disabled");
 				pubdatenode.setAttribute("href", "#");
 				pubdatenode.setAttribute("role", "button");
-				pubdatenode.setAttribute("style", "font-size: 1.5em");
+				pubdatenode.setAttribute("style", "font-size: 1em");
 
 				var i = document.createElement("i");
 				i.setAttribute("class", "icon-cal");
-				i.setAttribute("style", "height: 1.5em; width: 1.5em");
+				i.setAttribute("style", "height: 1em; width: 1em");
 
 				pubdatenode.appendChild(i);
 
@@ -76,7 +76,7 @@ $(document).ready(function() {
 
 				var j = document.createElement("i");
 				j.setAttribute("class", "icon-time");
-				j.setAttribute("style", "height: 1.5em; width: 1.5em");
+				j.setAttribute("style", "height: 1em; width: 1em");
 
 				pubdatenode.appendChild(j);
 
