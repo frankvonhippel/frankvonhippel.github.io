@@ -48,10 +48,12 @@ $(document).ready(function() {
 				card.setAttribute("style", "width:95%");
 				var cardbody = document.createElement("div");
 				cardbody.setAttribute("class", "card-body");
+				cardbody.setAttribute("style", "font-size: calc(8px + (12-8) * (100vw - 350px)/(800-400))");
 				// set title - parsed from, for example:
 				// 	<title>Episode 32. Materials Science: Ainissa Ramirez</title>
 				var textnode = document.createElement("h5");
 				textnode.setAttribute("class", "card-title");
+				textnode.setAttribute("style", "font-size: calc(8px + (12-8) * (100vw - 350px)/(800-400))");
 
 				var link = stripHtml(el.find("link").text());
 				var textlink = document.createElement("a");
@@ -64,7 +66,7 @@ $(document).ready(function() {
 				pubdatenode.setAttribute("class", "btn btn-disabled");
 				pubdatenode.setAttribute("href", "#");
 				pubdatenode.setAttribute("role", "button");
-				pubdatenode.setAttribute("style", "font-size: 1em");
+				pubdatenode.setAttribute("style", "font-size: calc(8px + (12-8) * (100vw - 350px)/(800-400))");
 
 				var i = document.createElement("i");
 				i.setAttribute("class", "icon-cal");

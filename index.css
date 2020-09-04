@@ -9,15 +9,15 @@
 }
 
 .span {
-	font-size: 1.5em;
+	font-size: calc(8px + (12-8) * (100vw - 350px)/(800-400));
 }
 
 .alert {
-	font-size: 1.5em;
+	font-size: calc(8px + (12-8) * (100vw - 350px)/(800-400));
 }
 
 .btn div {
-	font-size: 2em;
+	font-size: calc(8px + (12-8) * (100vw - 350px)/(800-400));
 }
 
 .bio-pic {
@@ -94,11 +94,11 @@
 }
 
 .card-title {
-	font-size: 1em;
+	font-size: calc(8px + (12-8) * (100vw - 350px)/(800-400));
 }
 
 .card-text {
-	font-size: 1em;
+	font-size: calc(8px + (12-8) * (100vw - 350px)/(800-400));
 }
 
 .book-image {
