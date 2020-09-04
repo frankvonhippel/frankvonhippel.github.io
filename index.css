@@ -37,6 +37,10 @@
   	background-repeat: no-repeat;
 }
 
+.icon-megaphone {
+	background-image : url(emojis/megaphone.png);
+}
+
 .icon-cal {
 	background-image : url(emojis/cal.png);
 }
