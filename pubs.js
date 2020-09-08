@@ -10,10 +10,9 @@ $(document).ready(function() {
 	$('body').flowtype({
  		minimum   : 500,
  		maximum   : 1200,
- 		minFont   : 16,
- 		maxFont   : 25,
- 		fontRatio : 25
-	});
+ 		minFont   : 20,
+ 		maxFont   : 30
+ 	});
 
 	
 });
