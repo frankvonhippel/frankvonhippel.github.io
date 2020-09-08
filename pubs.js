@@ -12,7 +12,7 @@ $(document).ready(function() {
  		maximum   : 1200,
  		minFont   : 16,
  		maxFont   : 25,
- 		fontRatio : 30
+ 		fontRatio : 25
 	});
 
 	
