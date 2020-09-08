@@ -10,7 +10,7 @@ $(document).ready(function() {
 	$('body').flowtype({
  		minimum   : 500,
  		maximum   : 1200,
- 		minFont   : 13,
+ 		minFont   : 15,
  		maxFont   : 25,
  		fontRatio : 30
 	});
