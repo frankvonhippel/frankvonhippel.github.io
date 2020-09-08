@@ -48,12 +48,12 @@ $(document).ready(function() {
 				card.setAttribute("style", "width:95%");
 				var cardbody = document.createElement("div");
 				cardbody.setAttribute("class", "card-body");
-				cardbody.setAttribute("style", "font-size: calc(12px + (14-12) * (100vw - 350px)/(800-400))");
+				cardbody.setAttribute("style", "font-size: 1em");
 				// set title - parsed from, for example:
 				// 	<title>Episode 32. Materials Science: Ainissa Ramirez</title>
 				var textnode = document.createElement("h5");
 				textnode.setAttribute("class", "card-title");
-				textnode.setAttribute("style", "font-size: calc(12px + (14-12) * (100vw - 350px)/(800-400))");
+				textnode.setAttribute("style", "font-size: 1em");
 
 				var link = stripHtml(el.find("link").text());
 				var textlink = document.createElement("a");
@@ -66,7 +66,7 @@ $(document).ready(function() {
 				pubdatenode.setAttribute("class", "btn btn-disabled");
 				pubdatenode.setAttribute("href", "#");
 				pubdatenode.setAttribute("role", "button");
-				pubdatenode.setAttribute("style", "font-size: calc(12px + (14-12) * (100vw - 350px)/(800-400))");
+				pubdatenode.setAttribute("style", "font-size: 1em");
 
 				var i = document.createElement("i");
 				i.setAttribute("class", "icon-cal");
@@ -123,6 +123,15 @@ $(document).ready(function() {
 				//     .attr('width', "100%")
 				//     .attr('scrolling', "no")
 				//     .appendTo('#pod_div_' + id);	
+
+				$('body').flowtype({
+			 		minimum   : 500,
+			 		maximum   : 1200,
+			 		minFont   : 13,
+			 		maxFont   : 25,
+			 		fontRatio : 30
+				});
+
 			});
 	
 
