@@ -37,6 +37,10 @@
   	background-repeat: no-repeat;
 }
 
+.icon-video {
+	background-image : url(emojis/video.png);
+}
+
 .icon-megaphone {
 	background-image : url(emojis/megaphone.png);
 }
