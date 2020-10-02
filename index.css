@@ -41,6 +41,10 @@
 	background-image : url(emojis/video.png);
 }
 
+.icon-reddit {
+	background-image : url(emojis/reddit.png);
+}
+
 .icon-megaphone {
 	background-image : url(emojis/megaphone.png);
 }
