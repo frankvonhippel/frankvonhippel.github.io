@@ -40,6 +40,7 @@ $(document).ready(function() {
 
 				// create list item 
 				var podnode = document.createElement("li");
+
 				// theme according to bootstrap
 				podnode.setAttribute("class", "list-group-item");
 				// create a bootstrap card
