@@ -113,37 +113,37 @@ $(document).ready(function() {
 
 				$(description).flowtype({
 			 		minimum   : 500,
-			 		maximum   : 1200,
-			 		minFont   : 35,
-			 		maxFont   : 45
+			 		maximum   : 2500,
+			 		minFont   : 12,
+			 		maxFont   : 25
 				});
 
 				$(textnode).flowtype({
 			 		minimum   : 500,
-			 		maximum   : 1200,
-			 		minFont   : 35,
-			 		maxFont   : 45
+			 		maximum   : 2500,
+			 		minFont   : 12,
+			 		maxFont   : 25
 				});
 
 				$('.p').flowtype({
 			 		minimum   : 500,
-			 		maximum   : 1200,
-			 		minFont   : 35,
-			 		maxFont   : 45
+			 		maximum   : 2500,
+			 		minFont   : 12,
+			 		maxFont   : 25
 				});
 
 				$('.btn').flowtype({
 			 		minimum   : 500,
-			 		maximum   : 1200,
-			 		minFont   : 35,
-			 		maxFont   : 45
+			 		maximum   : 2500,
+			 		minFont   : 12,
+			 		maxFont   : 25
 				});
 
 				$('.h1').flowtype({
 			 		minimum   : 500,
-			 		maximum   : 1200,
-			 		minFont   : 40,
-			 		maxFont   : 50
+			 		maximum   : 2500,
+			 		minFont   : 12,
+			 		maxFont   : 25
 				});
 				
 				var _src = "//html5-player.libsyn.com/embed/episode/id/"
@@ -151,20 +151,11 @@ $(document).ready(function() {
 						 + "/height/90/theme/custom/thumbnail/yes/"
 						 + "direction/forward/render-playlist/no/custom-color/000000/";
 
-				// THIS PART IS WORK IN PROGRESS.
-
-				// $('<iframe>')
-				//     .attr('src', _src)
-				//     .attr('height', 90)
-				//     .attr('width', "100%")
-				//     .attr('scrolling', "no")
-				//     .appendTo('#pod_div_' + id);	
-
 				$('body').flowtype({
 			 		minimum   : 500,
-			 		maximum   : 1200,
-			 		minFont   : 30,
-			 		maxFont   : 40
+			 		maximum   : 2500,
+			 		minFont   : 12,
+			 		maxFont   : 25
 				});
 
 			});

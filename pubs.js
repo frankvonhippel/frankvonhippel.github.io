@@ -9,30 +9,30 @@ $(document).ready(function() {
 
 	$('.p').flowtype({
  		minimum   : 500,
- 		maximum   : 1200,
- 		minFont   : 35,
- 		maxFont   : 45
+ 		maximum   : 2500,
+ 		minFont   : 12,
+ 		maxFont   : 25
 	});
 
 	$('.btn').flowtype({
  		minimum   : 500,
- 		maximum   : 1200,
- 		minFont   : 35,
- 		maxFont   : 45
+ 		maximum   : 2500,
+ 		minFont   : 12,
+ 		maxFont   : 25
 	});
 
 	$('.h1').flowtype({
  		minimum   : 500,
- 		maximum   : 1200,
- 		minFont   : 40,
- 		maxFont   : 50
+ 		maximum   : 2500,
+ 		minFont   : 12,
+ 		maxFont   : 25
 	});
 
 	$('body').flowtype({
  		minimum   : 500,
- 		maximum   : 1200,
- 		minFont   : 30,
- 		maxFont   : 40
+ 		maximum   : 2500,
+ 		minFont   : 12,
+ 		maxFont   : 25
 	});
 
 	
