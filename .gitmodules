@@ -1,3 +1,6 @@
 [submodule "FlowType.JS"]
 	path = FlowType.JS
 	url = https://github.com/simplefocus/FlowType.JS.git
+[submodule "bryden.pod"]
+	path = bryden.pod
+	url = git@github.com:maxvonhippel/bryden.pod.git
