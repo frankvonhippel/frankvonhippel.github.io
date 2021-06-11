@@ -3,4 +3,4 @@
 	url = https://github.com/simplefocus/FlowType.JS.git
 [submodule "bryden.pod"]
 	path = bryden.pod
-	url = git@github.com:maxvonhippel/bryden.pod.git
+	url = https://github.com/maxvonhippel/bryden.pod.git
