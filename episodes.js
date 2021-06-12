@@ -86,9 +86,12 @@ $(document).ready(function() {
 				pubdatenode.innerHTML += el.find("itunes\\:duration").text();
 
 				// set description
-				var description_text = stripHtml(el.find("description").text());
-				var description = document.createElement("p");
-				description.innerHTML = description_text;
+				var description_text = el.find("description").html();
+				var description = document.createElement("div");
+				description.innerHTML = description_text
+				                        .replace("<![CDATA[", "")
+				                        .replace("]]>", "");
+
 				description.setAttribute("class", "card-text");
 				// append components to card
 				cardbody.appendChild(textnode);
