@@ -109,6 +109,10 @@
 	background-image: url(emojis/stars.png);
 }
 
+.icon-small-stars {
+	background-image: url(emojis/lowStar.png);
+}
+
 .card-title {
 	font-size: calc(13px + (15-13) * (100vw - 350px)/(800-400));
 }
