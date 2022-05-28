@@ -22,9 +22,9 @@
 
 .bio-pic {
 	width: 400px;
+	height: 400px;
 	border-radius: 50%;
-	position: relative;
-	text-align: center;
+	padding: 1em;
 }
 
 [class*="icon-"] {
