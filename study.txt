@@ -1,0 +1,54 @@
+'''
+• Objects have state and behavior
+• State: all the properties of an object and the values of those properties 
+
+An ADT is a logical description of how we view the data and the operations allowed on that data.
+o describes what the data represents not how is the data represented
+
+A loop invariant is a condition that is true: before the loop starts before every iteration of the loop
+after the loop ends
+Assertion: a statement that some expression E is an invariant at some point in a program
+
+"frame" or "stack frame": a data structure that keeps track of variables in the function body, and their
+values, between the call to the function and its return
+
+‒ Algorithm: a step-by-step list of instructions for solving a problem
+‒ Program: an algorithm that been implemented in a given language
+
+Asymptotic complexity --> depends on computer speed and memory size
+
+for, while, insert, delete, find_tail = O(n)
+without tail reference - find_nth_element, concatenate = O(n)
+Binary search ---> O(log n)
+mergesort ---> O(n log n)
+dictionary get() --> O(n)
+
+The load factor of a hash table with N keys and table size M is given by the following: how full the table is
+L = N/M ---> used for complexity
+
+As load factor increases, the efficiency of inserting new keys and then finding those keys decreases
+
+Linear Probing: It can be shown that the average number of probes is
+1         1
+- (1 + -------)      For a succsessful search
+2       1 - L
+
+1           1
+- (1 + -----------)      For an unsuccsessful search
+2       (1 - L)^2
+
+Double Hashing
+1       1
+- ln(-------)      For a succsessful search
+L     1 - L
+
+     1
+(---------)      For an unsuccsessful search
+  (1 - L)
+
+Seperate Chaining
+    1
+1 + -L      For a succsessful search
+    2
+
+L       For an unsucsessful search
